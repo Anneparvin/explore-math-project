@@ -93,13 +93,13 @@ console.log("TotalWood requare: ", totalWood);
 
     // phone set problm solving(cheapestPhone)
 const phones = [
-    {name:"samsung", camera:12, storage:32gb, price:36000, color:"silver"},
-    {name:"oppo", camera:12, storage:32gb, price:56000, color:"black"},
-    {name:"walton", camera:60, storage:32gb, price:43000, color:"white"},
-    {name:"huawai", camera:12, storage:32gb, price:76000, color:"hui"},
+    {name:"samsung", camera:12, storage:"32gb", price:36000, color:"silver"},
+    {name:"oppo", camera:12, storage:"32gb", price:56000, color:"black"},
+    {name:"walton", camera:60, storage:"32gb", price:43000, color:"white"},
+    {name:"huawai", camera:12, storage:"32gb", price:76000, color:"hui"},
 ]
 function cheapestPhone(phones){
-    let cheapest = Phone[0];
+    let cheapest = phones[0];
     for (let i = 1; i < phones.length; i++) {
     const phone = phones[i];
     if (phone.price<cheapest.price) {
@@ -108,5 +108,48 @@ function cheapestPhone(phones){
     }
     return cheapest;
             }
-  const mySelection  = cheapestPhone(phones);
+//   const mySelection  = cheapestPhone(phones);
+//   console.log(mySelection);
+
+//   bestcamera
+const cameras = [
+    {name:"samsung", camera:"12px", storage:"32gb", price:36000, color:"silver"},
+    {name:"oppo", camera:"34px", storage:"32gb", price:56000, color:"black"},
+    {name:"walton", camera:"54px", storage:"32gb", price:43000, color:"white"},
+    {name:"huawai", camera:"86px", storage:"32gb", price:76000, color:"hui"},
+]
+function highestCamera(cameras){
+    let highestCamera = cameras[0];
+    for (let i = 1; i < cameras.px; i++) {
+    const camera = cameras[i];
+    if (highestCamera.px>camera.px) {
+     highestCamera = camera;   
+}
+    }
+    return highestCamera;
+            }
+  const mySelection  = highestCamera(cameras);
   console.log(mySelection);
+
+// shopping cart total
+const shoppingCart= [
+    {name: "shoe", price:1200},
+    {name: "shirt", price:2200},
+    {name: "pant", price:3700},
+    {name: "belt", price:600},
+];
+function totalCost(products){
+let sum = 0;
+for (let i=0; i<products.length; i++) {
+const product = products[i];
+sum = sum + product.price;
+}
+return sum;
+}
+const expense = totalCost(shoppingCart);
+console.log("total cost: ",  expense);
+
+
+
+
+
