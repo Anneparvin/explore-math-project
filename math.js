@@ -113,17 +113,17 @@ function cheapestPhone(phones){
 
 //   bestcamera
 const cameras = [
-    {name:"samsung", camera:"12px", storage:"32gb", price:36000, color:"silver"},
-    {name:"oppo", camera:"34px", storage:"32gb", price:56000, color:"black"},
-    {name:"walton", camera:"54px", storage:"32gb", price:43000, color:"white"},
-    {name:"huawai", camera:"86px", storage:"32gb", price:76000, color:"hui"},
+    {name:"samsung", camera:12, storage:"32gb", price:36000, color:"silver"},
+    {name:"oppo", camera:34, storage:"32gb", price:56000, color:"black"},
+    {name:"walton", camera:54, storage:"32gb", price:43000, color:"white"},
+    {name:"huawai", camera:86, storage:"32gb", price:76000, color:"hui"},
 ]
-function highestCamera(cameras){
-    let highestCamera = cameras[0];
-    for (let i = 1; i < cameras.px; i++) {
-    const camera = cameras[i];
-    if (highestCamera.px>camera.px) {
-     highestCamera = camera;   
+function highestCamera(Anne){
+    let highestCamera = Anne[0];
+    for (let i = 1; i < Anne.length; i++) {
+    const product = Anne[i];
+    if (product.camera> highestCamera.camera) {
+     highestCamera = product;   
 }
     }
     return highestCamera;
@@ -148,8 +148,38 @@ return sum;
 }
 const expense = totalCost(shoppingCart);
 console.log("total cost: ",  expense);
-
-
-
+// discount price
+// 1.. if a ticket number less than 100,per ticket price :100
+// 2... if a ticket number more than 100,but less than 200 .first 100 ticket will be 100/ticket rest ticket will be 90 taka per price.
+// 3..if you purchase more than 200 tickets
+//   first 100........100tk
+//   second 101-200......90 tk
+//   200+......70tk
+function ticketPrice (ticketQuantity){
+const first100Rate = 100;
+const second100Rate = 200;
+const restTicketRate = 70;
+if (ticketQuantity<=100){
+    const price = ticketQuantity*first100Rate;
+    return price ;   
+}
+else if (ticketQuantity<=200){
+    const first100Price = 100*first100Rate;
+    const restTicketQuantity = ticketQuantity - 100;
+    const restTicketPrice = restTicketQuantity*second100Rate;
+    const totalPrice = first100Price + restTicketPrice;
+    return totalPrice ; 
+}
+else{
+    const first100Price = 100*first100Rate;
+    const second100Price = 100*second100Rate;
+    const restTicketQuantity = ticketQuantity - 200;
+    const restTicketPrice = restTicketQuantity*restTicketRate;
+    const totalCost = first100Price +second100Price+ restTicketPrice; 
+    return totalCost ; 
+}
+}
+const price = ticketPrice(120);
+console.log('price:', price);
 
 
