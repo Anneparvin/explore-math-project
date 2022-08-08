@@ -182,4 +182,16 @@ else{
 const price = ticketPrice(120);
 console.log('price:', price);
 
+// multiply function
+function multiply(num1, num2) {
+    console.log(num1, num1);
+    return num1 * num2;
+}
+const output = multiply(21, 45);
+console.log('output:', output);
+
+
+
+
+
 
