@@ -163,7 +163,7 @@ for (let i = 0; i < arr.length; i++){
 }
 return false;
 }
-console.log("checkGPA: "[78,82,69]);
+console.log("checkGPA:"  [78,82,69]);
 
 // find the largest element of an array
 

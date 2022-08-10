@@ -154,10 +154,10 @@ console.log("total cost: ",  expense);
 // 3..if you purchase more than 200 tickets
 //   first 100........100tk
 //   second 101-200......90 tk
-//   200+......70tk
-function ticketPrice (ticketQuantity){
+//   200+......70tk 
+function ticketPrice (ticketQuantity){ 
 const first100Rate = 100;
-const second100Rate = 200;
+const second100Rate = 90;
 const restTicketRate = 70;
 if (ticketQuantity<=100){
     const price = ticketQuantity*first100Rate;
@@ -179,7 +179,7 @@ else{
     return totalCost ; 
 }
 }
-const price = ticketPrice(120);
+const price = ticketPrice(100);
 console.log('price:', price);
 
 // multiply function
